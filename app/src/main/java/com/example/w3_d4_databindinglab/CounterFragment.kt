@@ -44,7 +44,6 @@ class CounterFragment : Fragment() {
                 if(increment.text.toString().isNotEmpty())
                     viewModel.setIncrement(increment = increment.text.toString().toInt())
 
-                // Blocks
                 if((viewModel.getCounter()!!.value!!.toInt() + viewModel.getIncrement()!!.value!!) < Int.MAX_VALUE)
                     viewModel.incCounter()
             }
@@ -53,7 +52,6 @@ class CounterFragment : Fragment() {
         return binding.root
     }
 
-    // Save state
     override fun onDestroy() {
         super.onDestroy()
         save()
