@@ -14,21 +14,25 @@
         tools:context=".MainFragment">
 
         <TextView
-            android:id="@+id/counter"
+            android:id="@+id/counterTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="216dp"
             android:text="@{viewModel.counter}"
             android:textAlignment="center"
             android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTxt"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/increment"
+            android:id="@+id/editTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="240dp"
             android:ems="10"
             android:hint="value"
             android:importantForAutofill="no"
@@ -36,20 +40,21 @@
             android:minHeight="48dp"
             android:textAlignment="center"
             android:textColorHint="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="increment"
-            app:layout_constraintBottom_toTopOf="@+id/increment"
+            android:text="Increment"
+            app:layout_constraintBottom_toTopOf="@+id/editTxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/counter" />
+            app:layout_constraintTop_toBottomOf="@+id/counterTxt" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
